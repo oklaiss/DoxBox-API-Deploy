@@ -1,6 +1,6 @@
 dependencies:
   pre:
-    npm install aglio
+    - npm install aglio
 
 deployment:
     prod:
