@@ -6,5 +6,6 @@ deployment:
     prod:
       branch: master
       commands:
+        - mkdir aglio
         - find . -name '*.apib' -type f -exec sh -c \ 'aglio -i ${0} -o aglio/${0%.apib}.html' {} \;
         - aws s3 sync aglio/ s3:// --delete
