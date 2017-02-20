@@ -1,0 +1,10 @@
+dependencies:
+  pre:
+    npm install aglio
+
+deployment:
+    prod:
+      branch: master
+      commands:
+        - aglio -i *.apib -o aglio/
+        - aws s3 sync aglio/ s3:// --delete
