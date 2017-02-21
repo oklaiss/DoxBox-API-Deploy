@@ -8,8 +8,9 @@ deployment:
       commands:
         - mkdir aglio
         - find . -name '*.apib' -type f -exec sh -c \ 'aglio -i ${0} -o aglio/${0%.apib}.html' {} \;
+        # Update "doxboxtest" with your AWS S3 bucket name
         - aws s3 sync aglio/ s3://doxboxtest/ --delete
 
 test:
     override:
-        - echo "test"
+        - echo "Done"
