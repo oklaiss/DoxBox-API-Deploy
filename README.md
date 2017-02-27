@@ -7,3 +7,4 @@ API S3 test deployment repository
 Add our example circle.yml to your Github API Repo and update it with your AWS S3 bucket name
 
 Learn how to add your AWS credentials to CircleCi [here](https://circleci.com/docs/continuous-deployment-with-amazon-s3/)
+Make sure to create a limited access user for use with CircleCi!
